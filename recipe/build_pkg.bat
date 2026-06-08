@@ -4,7 +4,7 @@ setlocal EnableExtensions EnableDelayedExpansion
 set "PKG_CONFIG_PATH=%LIBRARY_LIB%\pkgconfig;%LIBRARY_PREFIX%\share\pkgconfig;%BUILD_PREFIX%\Library\lib\pkgconfig"
 set "MESON_RSP_THRESHOLD=320000"
 
-meson setup _build -Dprefix=%LIBRARY_PREFIX% -Dbuildtype=release -Ddefault_library=shared -Dlapack=custom
+meson setup _build -Dprefix=%LIBRARY_PREFIX% -Dbuildtype=release -Ddefault_library=shared -Dlapack=custom -Dcustom_libraries="-L%LIBRARY_PREFIX%\bin,lapack,blas"
 if %ERRORLEVEL% neq 0 exit 1
 
 meson compile -C _build
