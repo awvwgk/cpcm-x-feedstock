@@ -13,7 +13,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/cpcm-x-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/cpcm-x-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -27,17 +34,17 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27134&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cpcm-x-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27134&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cpcm-x-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27134&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cpcm-x-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -54,6 +61,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cpcm--x-green.svg)](https://anaconda.org/conda-forge/cpcm-x) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cpcm-x.svg)](https://anaconda.org/conda-forge/cpcm-x) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cpcm-x.svg)](https://anaconda.org/conda-forge/cpcm-x) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cpcm-x.svg)](https://anaconda.org/conda-forge/cpcm-x) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cpcm--x--devel-green.svg)](https://anaconda.org/conda-forge/cpcm-x-devel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cpcm-x-devel.svg)](https://anaconda.org/conda-forge/cpcm-x-devel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cpcm-x-devel.svg)](https://anaconda.org/conda-forge/cpcm-x-devel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cpcm-x-devel.svg)](https://anaconda.org/conda-forge/cpcm-x-devel) |
 
 Installing cpcm-x
 =================
@@ -65,16 +73,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cpcm-x` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `cpcm-x, cpcm-x-devel` can be installed with `conda`:
 
 ```
-conda install cpcm-x
+conda install cpcm-x cpcm-x-devel
 ```
 
 or with `mamba`:
 
 ```
-mamba install cpcm-x
+mamba install cpcm-x cpcm-x-devel
 ```
 
 It is possible to list all of the versions of `cpcm-x` available on your platform with `conda`:

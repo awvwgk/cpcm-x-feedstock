@@ -23,7 +23,7 @@ liblapack:
 module_abi:
 - gfortran
 target_platform:
-- linux-64
+- linux-ppc64le
 zip_keys:
 - - c_compiler_version
   - fortran_compiler_version
